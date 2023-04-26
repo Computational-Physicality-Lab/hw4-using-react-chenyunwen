@@ -4,10 +4,10 @@
 
 .text-box-container{
     display: flex; 
-    align-items: center;
+    align-items: start;
     justify-content:center;
     flex-direction: row;
-    text-align: top;
+    /* text-align: top; */
 }
 
 .text-box{

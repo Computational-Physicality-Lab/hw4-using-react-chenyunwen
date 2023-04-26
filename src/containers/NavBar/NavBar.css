@@ -1,0 +1,13 @@
+.nav-red-line{
+    height: 30px;
+    color: #c51230;
+    background: #c51230;
+    border: none;
+    margin: 0px;
+}
+
+.nav-logo{
+    height: 80px; 
+    /* margin-left: 5%; 
+    margin-top: 0px; */
+}
