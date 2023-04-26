@@ -15,7 +15,7 @@ function App() {
       {/* <header className="App-header"></header> */}
       <div className='MainContent'>
         <Routes>
-          <Route path ={appRoutes.home} element={<HomePage />}  exact/>
+          <Route path ={appRoutes.home} element={<HomePage />}  exact="true" />
           <Route path ={appRoutes.not_implemented} element={<NotImplementedPage />}/>
         </Routes>
       </div>

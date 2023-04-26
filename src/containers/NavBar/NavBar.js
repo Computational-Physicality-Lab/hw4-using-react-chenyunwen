@@ -39,7 +39,7 @@ function Example(args) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink tag={RouterNavLink} to={appRoutes.home} exact>
+              <NavLink tag={RouterNavLink} to={appRoutes.home} exact="true">
                 T-SHIRTS
               </NavLink>
             </NavItem>
