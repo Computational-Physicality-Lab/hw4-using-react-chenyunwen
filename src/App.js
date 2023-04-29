@@ -3,6 +3,7 @@ import { Routes, Route, Redirect } from 'react-router-dom';
 import appRoutes from './shared/appRoutes';
 
 import NavBar from './containers/NavBar/NavBar';
+import Footer from './containers/Footer/Footer';
 import HomePage from './containers/HomePage/HomePage';
 import NotImplementedPage from './containers/NotImplementedPage/NotImplementedPage';
 
@@ -19,8 +20,8 @@ function App() {
           <Route path ={appRoutes.not_implemented} element={<NotImplementedPage />}/>
         </Routes>
       </div>
-
-      </div>
+      <Footer />
+    </div>
   );
 }
 

@@ -22,7 +22,7 @@ import Cart from '../../assets/images/cart.png'
 import appRoutes from '../../shared/appRoutes';
 import './NavBar.css';
 
-function Example(args) {
+function NavBar(args) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -40,7 +40,7 @@ function Example(args) {
           <span>0</span>
         </NavbarBrand>
       </Navbar>
-      
+      <hr style={{margin: '0px'}}/>
       <Navbar expand='md'>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -77,4 +77,4 @@ function Example(args) {
   );
 }
 
-export default Example;
+export default NavBar;
