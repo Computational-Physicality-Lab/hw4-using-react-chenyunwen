@@ -4,10 +4,58 @@
     background: #c51230;
     border: none;
     margin: 0px;
+    opacity: 1;
 }
 
 .nav-logo{
     height: 80px; 
-    /* margin-left: 5%; 
-    margin-top: 0px; */
+}
+
+.headerStyle{
+    font-family:"Catamaran", serif;
+    font-size: 28pt;
+}
+
+.shopping-cart {
+    border-radius: 10%;
+    background: #ac2432;
+    width: 75px;
+    height: 50px;
+
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly; 
+    flex-direction: row;
+    text-decoration:none;
+    color: white;
+    font-family:"Open Sans", serif;
+    font-size: 20pt; 
+}
+
+.shopping-cart:hover{
+    transition: 0.5s;
+    color: gainsboro;
+}
+
+.menu{
+    height: 50px;
+    display: flex;  
+    flex-direction:row; 
+    justify-content:space-evenly; 
+    align-items: center;
+    /* margin-left: 1%;
+    margin-right: 1%; */
+}
+
+.menu-font{
+    text-decoration:none;
+    border-bottom:5px solid transparent;
+    font-family:"Open Sans", serif;
+    font-size: 12pt; 
+    color: #c51230;
+}
+
+.menu-font:hover{
+    transition: 0.5s;
+    border-bottom:5px solid #c51230;
 }
