@@ -1,18 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from 'reactstrap';
-import { NavLink as RouterNavLink } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.css';
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarToggler,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-//   NavbarText,
-// } from 'reactstrap';
 
 import appRoutes from '../../shared/appRoutes';
 import './Footer.css';

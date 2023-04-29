@@ -46,7 +46,7 @@ function NavBar(args) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="md-auto" navbar>
             <NavItem className='menu-font'>
-              <NavLink tag={RouterNavLink} to={appRoutes.home} exact="true">
+              <NavLink tag={RouterNavLink} to={appRoutes.products}>
                 T-SHIRTS
               </NavLink>
             </NavItem>
