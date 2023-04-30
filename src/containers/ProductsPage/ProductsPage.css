@@ -44,7 +44,7 @@
 .product-btn {
     /* border-radius: 10px;
     border: 5px; */
-    border: #c51230;
+    border-color: #c51230;
     background: #c51230;
     /* width: 80px;
     height: 40px; */
@@ -64,4 +64,5 @@
     color: white;
     transition: 0.5s;
     background: #c51230;
+    border-color: #c51230;
 }

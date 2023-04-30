@@ -7,6 +7,7 @@ import Footer from './containers/Footer/Footer';
 import HomePage from './containers/HomePage/HomePage';
 import NotImplementedPage from './containers/NotImplementedPage/NotImplementedPage';
 import ProductsPage from './containers/ProductsPage/ProductsPage';
+import DetailsPage from './containers/ProductsPage/DetailsPage/DetailsPage';
 
 import './App.css';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path ={appRoutes.home} element={<HomePage />}  exact="true" />
           <Route path ={appRoutes.not_implemented} element={<NotImplementedPage />}/>
           <Route path ={appRoutes.products} element={<ProductsPage />}/>
+          <Route path ={appRoutes.product} element={<DetailsPage />}/>
         </Routes>
       </div>
       <Footer />

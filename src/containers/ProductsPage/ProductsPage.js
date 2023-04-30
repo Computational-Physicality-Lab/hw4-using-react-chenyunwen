@@ -32,7 +32,7 @@ function ProductsPage() {
                   sm={12}
                   className='t-shirt-block'
                 >
-                  <Link><img src={pic} alt={name} /></Link>
+                  <Link to={`${appRoutes.products}/${shirt.name}`}><img src={pic} alt={name} /></Link>
                   <p className="t-shirt-title">{`${name}`}</p>
                   <p className="t-shirt-text">Available in {`${colorNum} ${temp}`}</p>
                   <Button href={`${appRoutes.products}/${shirt.name}`} className='product-btn'>See Page</Button>
