@@ -41,10 +41,10 @@ function NavBar(args) {
         </NavbarBrand>
       </Navbar>
       <hr style={{margin: '0px'}}/>
-      <Navbar expand='md'>
+      <Navbar expand='md' style={{padding: '5px'}}>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="md-auto" navbar>
+          <Nav className="md-auto menu" navbar>
             <NavItem className='menu-font'>
               <NavLink tag={RouterNavLink} to={appRoutes.products}>
                 T-SHIRTS
@@ -73,6 +73,7 @@ function NavBar(args) {
           </Nav>
         </Collapse>
       </Navbar>
+      <hr style={{margin: '0px'}}/>
     </div>
   );
 }
