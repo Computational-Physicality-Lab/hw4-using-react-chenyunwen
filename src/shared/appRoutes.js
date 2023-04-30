@@ -2,7 +2,7 @@ const routes = {
   home: "/",
   not_implemented: "/not_implemented",
   products: "/products",
-  // character: "/characters/:id",
+  product: "/products/:name",
   // movies: "/movies",
   // movie: "/movies/:id"
 };

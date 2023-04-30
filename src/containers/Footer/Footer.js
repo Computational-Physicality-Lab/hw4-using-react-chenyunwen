@@ -13,7 +13,7 @@ function Footer(args) {
         <Link to={appRoutes.not_implemented} className='footer-font'>Privacy Policy</Link>
         <Link to={appRoutes.not_implemented} className='footer-font'>Careers</Link>
         <Link to={appRoutes.not_implemented} className='footer-font'>Reviews</Link>
-        <span class="footer-font" style={{color: 'white'}}>Designed by Yun-Wen, Chen</span>
+        <span className="footer-font" style={{color: 'white'}}>Designed by Yun-Wen, Chen</span>
     </div>
   );
 }
