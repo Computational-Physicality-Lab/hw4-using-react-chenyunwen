@@ -35,9 +35,9 @@ function NavBar(args) {
           <img src={Logo} alt='logo' className='nav-logo'/>
         </NavbarBrand>
         <NavbarText className="headerStyle">Scotty Shirts U Illustrate (SSUI)</NavbarText>
-        <NavbarBrand className='shopping-cart' tag={RouterNavLink} to={appRoutes.home}>
+        <NavbarBrand className='shopping-cart' tag={RouterNavLink} to={appRoutes.my_cart}>
           <img src={Cart} alt='cart' style={{ height: '40px'}} />
-          <span>0</span>
+          <span>{args.total_quantity}</span>
         </NavbarBrand>
       </Navbar>
       <hr style={{margin: '0px'}}/>

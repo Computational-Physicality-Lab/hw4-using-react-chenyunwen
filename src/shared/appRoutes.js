@@ -3,6 +3,7 @@ const routes = {
   not_implemented: "/not_implemented",
   products: "/products",
   product: "/products/:index",
+  my_cart: "/products/myCart",
   // movies: "/movies",
   // movie: "/movies/:id"
 };

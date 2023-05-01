@@ -10,7 +10,7 @@ import default_shirt_back from '../../../assets/shirt_images/default-w-back.png'
 
 import './DetailsPage.css';
 
-function DetailsPage() {
+function DetailsPage(prop) {
     const { index } = useParams();
     // console.log(index)
     const shirt = shirtList[Number(index)]; //.filter((srt) => srt.name === name)[0];
@@ -21,6 +21,12 @@ function DetailsPage() {
     const [pic, setPic] = useState(colors[cur_color][cur_site]);
     const [quantity, setQuantity] = useState(price? 1 : 0);
     const [size, setSize] = useState('Size');
+    const [product, setProduct] = useState({
+                                            "name": name,
+                                            "color": cur_color,
+                                            "quantity": quantity,
+                                            "size": size
+                                          });
 
     function change_site(site){
         setSite(site);
@@ -40,13 +46,6 @@ function DetailsPage() {
     function change_size(e){
       setSize(e.target.value);
     }
- 
-    function add_to_cart(){
-      
-    }
-    // useEffect(() => {
-    //     localStorage.setItem("myData", JSON.stringify(data));
-    // }, [data]);
 
     const Size = ['Size',
                   'Women’s XS', 'Women’s S', 'Women’s M', 'Women’s L', 'Women’s XL', 'Women’s 2XL', 
@@ -94,7 +93,7 @@ function DetailsPage() {
                 </div>
 
                 <div className='option-container' id='add-to-cart'>
-                  <Button className='product-btn' disabled={(quantity === 0 || size === 'Size') ? true : false} onClick={() => add_to_cart()}>Add To Cart</Button>
+                  <Button className='product-btn' disabled={(quantity === 0 || size === 'Size') ? true : false} onClick={() => {prop.add_to_cart(name, cur_color, quantity, size)}}>Add To Cart</Button>
                 </div>
             </Col>
           </Row>

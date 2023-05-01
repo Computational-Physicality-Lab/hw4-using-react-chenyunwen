@@ -19,8 +19,9 @@
 .shopping-cart {
     border-radius: 10%;
     background: #ac2432;
-    width: 75px;
+    width: auto;
     height: 50px;
+    padding: 5px;
 
     display: flex; 
     align-items: center;
