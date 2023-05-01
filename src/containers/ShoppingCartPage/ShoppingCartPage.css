@@ -16,3 +16,31 @@
     color: gray;
     font-size: 20pt;
 }
+
+.price-box{
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #c51230;
+    padding: 8px;
+    width: auto;
+    height: auto;
+    margin: 30px;
+    text-align: left;
+}
+
+.price-box-title{
+    font-family:"Catamaran", serif; 
+    font-size: 24px; 
+    margin: 10px; 
+    color: black;
+}
+
+.price-text{
+    font-size: 16px; 
+}
+
+.price{
+    color: #c51230;
+    float: right;
+    margin: 0px;
+}
