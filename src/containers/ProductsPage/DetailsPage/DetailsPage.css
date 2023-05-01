@@ -38,3 +38,27 @@
 .color-btn{
     color: black;
 }
+
+.quantity-sel {
+    border-radius: 10px;
+    /* border: 5px; */
+    border-color: #c51230;
+    width: 60px;
+    height: 40px;
+    font-family:"Open Sans", serif;
+    text-align: center;
+    margin: 10px;
+    font-size: 10pt;
+}
+
+.size-sel {
+    border-radius: 10px;
+    /* border: 5px; */
+    border-color: #c51230;
+    /* width: 60px; */
+    height: 40px;
+    font-family:"Open Sans", serif;
+    text-align: center;
+    margin: 10px;
+    font-size: 10pt;
+}

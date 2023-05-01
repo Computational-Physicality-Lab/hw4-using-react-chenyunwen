@@ -13,11 +13,11 @@ function DetailsPage() {
     const shirt = shirtList.filter((srt) => srt.name === name)[0];
     const { description, price, colors } = shirt;
 
-    // let cur_color = Object.values(colors)[0];
-    // let pic = (cur_color.front) ? cur_color.front : shirt.default.front;
     const [cur_site, setSite] = useState('front');
     const [cur_color, setColor] = useState(Object.keys(colors)[0]);
     const [pic, setPic] = useState(colors[cur_color][cur_site]);
+    const [quantity, setQuantity] = useState(1);
+    const [size, setSize] = useState('Size');
 
     function change_site(site){
         setSite(site);
@@ -28,6 +28,19 @@ function DetailsPage() {
         setColor(color);
         setPic(colors[color][cur_site])
     }
+
+    const Quantity = price ? Array.from({length: 20}, (_, i) => i + 1):Array.from({length: 0}, (_, i) => 0);
+    function change_quantity(e){
+      setQuantity(e.target.value);
+    }
+
+    function change_size(e){
+      setSize(e.target.value);
+    }
+ 
+    const Size = ['Size',
+                  'Women’s XS', 'Women’s S', 'Women’s M', 'Women’s L', 'Women’s XL', 'Women’s 2XL', 
+                  'Men’s XS', 'Men’s S', 'Men’s M', 'Men’s L', 'Men’s XL', 'Men’s 2XL']
 
     return (
       <div className="details">
@@ -53,13 +66,33 @@ function DetailsPage() {
                         )
                     })}
                 </div>
+                <div className='option-container'>
+                    <span className="t-shirt-text">Quantity:</span>
+                    <select className='quantity-sel' onChange={change_quantity}>
+                      {Quantity.map((q) => {
+                          return(<option key={q} value={q}>{`${q}`}</option>)
+                      })}
+                    </select>
+                </div>
+                <div className='option-container'>
+                    <span className="t-shirt-text">Size:</span>
+                    <select className='size-sel' onChange={change_size}>
+                      {Size.map((s) => {
+                          return(<option key={s} value={s} >{`${s}`}</option>)
+                      })}
+                    </select>
+                </div>
+
+                <div className='option-container' id='add-to-cart'>
+                  <Button className='product-btn' disabled={size == 'Size' ? true : false}>Add To Cart</Button>
+                </div>
             </Col>
           </Row>
         </Container>
-        
-        
       </div>
     );
 }
-  
-  export default DetailsPage;
+
+export default DetailsPage;
+
+
