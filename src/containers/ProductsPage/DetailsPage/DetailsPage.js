@@ -93,7 +93,7 @@ function DetailsPage(prop) {
                 </div>
 
                 <div className='option-container' id='add-to-cart'>
-                  <Button className='product-btn' disabled={(quantity === 0 || size === 'Size') ? true : false} onClick={() => {prop.add_to_cart(name, cur_color, quantity, size)}}>Add To Cart</Button>
+                  <Button className='product-btn' disabled={(quantity === 0 || size === 'Size') ? true : false} onClick={() => {prop.add_to_cart(index, cur_color, quantity, size)}}>Add To Cart</Button>
                 </div>
             </Col>
           </Row>

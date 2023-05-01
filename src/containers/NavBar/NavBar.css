@@ -17,6 +17,8 @@
 }
 
 .shopping-cart {
+    color: white !important;
+
     border-radius: 10%;
     background: #ac2432;
     width: auto;
@@ -28,14 +30,14 @@
     justify-content: space-evenly; 
     flex-direction: row;
     text-decoration:none;
-    color: white;
+    
     font-family:"Open Sans", serif;
     font-size: 20pt; 
 }
 
 .shopping-cart:hover{
     transition: 0.5s;
-    color: gainsboro;
+    color: gainsboro !important;
 }
 
 .menu{

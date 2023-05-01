@@ -22,13 +22,13 @@ class App extends Component{
       cart: []
     }
     this.add_to_cart = this.add_to_cart.bind(this);
+    this.change_cart_obj = this.change_cart_obj.bind(this);
   }
   
-  add_to_cart(name, cur_color, quantity, size){
-    // console.log("name:" + name);
-
+  add_to_cart(index, cur_color, quantity, size){
     let product = {
-      "name": name,
+      "index": index,
+      // "name": name,
       "color": cur_color,
       "quantity": quantity,
       "size": size
@@ -39,15 +39,21 @@ class App extends Component{
     this.setState({
         cart
     });
-    // this.cart.push(product);
-    const total_quantity = this.state.total_quantity + product.quantity;
-    // total_quantity += product.quantity;
+    const total_quantity = Number(this.state.total_quantity) + Number(product.quantity);
     this.setState({total_quantity});
-    // this.setState({
-    //   carts
-    // });
-    // console.log("cart: " + this.state.total_quantity);
-    // console.log(this.state.cart);
+  }
+
+  change_cart_obj(cart_idx, new_quantity){
+    
+    const old_quantity = this.state.cart[cart_idx].quantity;
+    const change_num = new_quantity - old_quantity;
+    console.log("change_num: " + change_num);
+    const total_quantity = Number(this.state.total_quantity) + change_num;
+    this.setState({total_quantity});
+    const cart = this.state.cart;
+    cart[cart_idx].quantity = new_quantity;
+    this.setState({cart});
+
   }
   
   render(){
@@ -61,7 +67,7 @@ class App extends Component{
             <Route path ={appRoutes.not_implemented} element={<NotImplementedPage />}/>
             <Route path ={appRoutes.products} element={<ProductsPage />}/>
             <Route path ={appRoutes.product} element={<DetailsPage add_to_cart={this.add_to_cart}/>}/>
-            <Route path ={appRoutes.my_cart} element={<ShoppingCartPage total_quantity={this.state.total_quantity}/>}/>
+            <Route path ={appRoutes.my_cart} element={<ShoppingCartPage total_quantity={this.state.total_quantity} cart={this.state.cart} change_cart_obj={this.change_cart_obj}/>}/>
           </Routes>
         </div>
         <Footer />
