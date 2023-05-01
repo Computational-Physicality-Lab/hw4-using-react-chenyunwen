@@ -92,7 +92,7 @@ function ShoppingCartPage(prop) {
                             <span className="t-shirt-text price-text">Est. Shipping:</span>
                         </Col>
                         <Col lg={4} md={4} sm={4}>
-                        <span className="t-shirt-text price-text price">{`$${prop.subtotal_price == 0? '0.00' : '6.95'}`}</span>
+                        <span className="t-shirt-text price-text price">{`$${print_subtotal_price == 0? '0.00' : '6.95'}`}</span>
                         </Col>
                     </Row>
                     <Row>
