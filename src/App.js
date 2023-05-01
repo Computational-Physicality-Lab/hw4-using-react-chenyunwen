@@ -25,6 +25,7 @@ class App extends Component{
     }
     this.add_to_cart = this.add_to_cart.bind(this);
     this.change_cart_obj = this.change_cart_obj.bind(this);
+    this.delete_cart_obj = this.delete_cart_obj.bind(this);
   }
   
   add_to_cart(index, cur_color, quantity, size){
@@ -50,7 +51,6 @@ class App extends Component{
   }
 
   change_cart_obj(cart_idx, new_quantity){
-    
     const old_quantity = this.state.cart[cart_idx].quantity;
     const change_num = new_quantity - old_quantity;
     console.log("change_num: " + change_num);
@@ -61,6 +61,21 @@ class App extends Component{
     this.setState({cart});
     const price = Number(shirtList[this.state.cart[cart_idx].index].price.split('$')[1]);
     const subtotal_price = (Number(this.state.subtotal_price) + change_num*price);
+    this.setState({subtotal_price});
+  }
+
+  delete_cart_obj(cart_idx){
+    const total_quantity = Number(this.state.total_quantity) - Number(this.state.cart[cart_idx].quantity);
+    const price = Number(shirtList[this.state.cart[cart_idx].index].price.split('$')[1]);
+    const subtotal_price = (Number(this.state.subtotal_price) - Number(this.state.cart[cart_idx].quantity)*price);
+    const cart = this.state.cart;
+    cart.splice(cart_idx, 1);
+    console.log("delete, total_quantity:" + total_quantity);
+    console.log("delete, subtotal_price:" + subtotal_price);
+    console.log("delete, cart_idx:" + cart.length);
+
+    this.setState({cart});
+    this.setState({total_quantity});
     this.setState({subtotal_price});
   }
   
@@ -75,7 +90,7 @@ class App extends Component{
             <Route path ={appRoutes.not_implemented} element={<NotImplementedPage />}/>
             <Route path ={appRoutes.products} element={<ProductsPage />}/>
             <Route path ={appRoutes.product} element={<DetailsPage add_to_cart={this.add_to_cart}/>}/>
-            <Route path ={appRoutes.my_cart} element={<ShoppingCartPage total_quantity={this.state.total_quantity} cart={this.state.cart} subtotal_price={this.state.subtotal_price} change_cart_obj={this.change_cart_obj}/>}/>
+            <Route path ={appRoutes.my_cart} element={<ShoppingCartPage total_quantity={this.state.total_quantity} cart={this.state.cart} subtotal_price={this.state.subtotal_price} change_cart_obj={this.change_cart_obj} delete_cart_obj={this.delete_cart_obj}/>}/>
           </Routes>
         </div>
         <Footer />
