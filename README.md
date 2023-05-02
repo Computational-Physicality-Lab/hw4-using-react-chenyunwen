@@ -3,7 +3,7 @@
 This is the starter code of [2023-Programming User Interface Homework](https://hackmd.io/@akairisu/ByGFeGdZh)
 
 ### 姓名：陳允玟
-### 你 deploy 的網站連結
+### 你 deploy 的網站連結：https://darling-granita-9a80c8.netlify.app/
 ### 你所實作的加分作業項目，以及如何觸發它
 ### 在前述可任意實作的情況下，你設計的行為，e.g.當使用者離開產品詳細資訊頁面又回來時、當使用者關閉網頁又重開時、當使用者開啟複數網頁時等等
 ### 重要：請討論使用 React 實作與作業一中使用純 html/css/JavaScript 實作有何不同。哪一個比較方便與為什麼？哪一個比較容易理解如何操作與為什麼？哪一個在實作同一個頁面時需要撰寫更多程式碼？
