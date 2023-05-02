@@ -63,7 +63,7 @@ function ShoppingCartPage(prop) {
                                     <span className="t-shirt-text" style={{color: '#c51230'}}>{cart_obj.size}</span>
                                 </div>
                                 <div className='option-container'>
-                                    <span className="t-shirt-text">Price:</span>
+                                    <span className="t-shirt-text">Price (each):</span>
                                     <span className="t-shirt-text" style={{color: '#c51230'}}>{price}</span>
                                 </div>
                                 <div><Button className='product-btn' onClick={() => prop.delete_cart_obj(idx)}>Remove</Button></div>
