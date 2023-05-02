@@ -77,40 +77,41 @@ function ShoppingCartPage(prop) {
 
                 {/* price box */}
                 <Col lg={6} md={12} sm={12} className=''>
-                <div className='price-box'>
-                    <span className='price-box-title'>Order Summary</span>
-                    <Row>
-                        <Col lg={8} md={8} sm={8}>
-                            <span className="t-shirt-text price-text">Subtotal:</span>
-                        </Col>
-                        <Col lg={4} md={4} sm={4}>
-                            <span className="t-shirt-text price-text price">{`$${print_subtotal_price}`}</span>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={8} md={8} sm={8}>
-                            <span className="t-shirt-text price-text">Est. Shipping:</span>
-                        </Col>
-                        <Col lg={4} md={4} sm={4}>
-                        <span className="t-shirt-text price-text price">{`$${print_subtotal_price == 0? '0.00' : '6.95'}`}</span>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={8} md={8} sm={8}></Col>
-                        <Col lg={4} md={4} sm={4}>
-                            <hr className='shopping-cart-line'/>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={8} md={8} sm={8}>
-                            <span className="t-shirt-text" style={{fontSize: '24px'}}>Total:</span>
-                        </Col>
-                        <Col lg={4} md={4} sm={4}>
-                        <span className="t-shirt-text price" style={{fontSize: '24px'}}>{`$${print_total_price}`}</span>
-                        </Col>
-                    </Row>
-                    
-                </div>
+                    <div className='price-box'>
+                        <span className='price-box-title'>Order Summary</span>
+                        <Row>
+                            <Col lg={8} md={8} sm={8}>
+                                <span className="t-shirt-text price-text">Subtotal:</span>
+                            </Col>
+                            <Col lg={4} md={4} sm={4}>
+                                <span className="t-shirt-text price-text price">{`$${print_subtotal_price}`}</span>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col lg={8} md={8} sm={8}>
+                                <span className="t-shirt-text price-text">Est. Shipping:</span>
+                            </Col>
+                            <Col lg={4} md={4} sm={4}>
+                            <span className="t-shirt-text price-text price">{`$${print_subtotal_price == 0? '0.00' : '6.95'}`}</span>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col lg={8} md={8} sm={8}></Col>
+                            <Col lg={4} md={4} sm={4}>
+                                <hr className='shopping-cart-line'/>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col lg={8} md={8} sm={8}>
+                                <span className="t-shirt-text" style={{fontSize: '24px'}}>Total:</span>
+                            </Col>
+                            <Col lg={4} md={4} sm={4}>
+                            <span className="t-shirt-text price" style={{fontSize: '24px'}}>{`$${print_total_price}`}</span>
+                            </Col>
+                        </Row>
+                        <div style={{textAlign: 'center'}}><Link to={appRoutes.not_implemented}><Button className='product-btn' >Sign in and Check out</Button></Link></div>
+                    </div>
+                    <div style={{textAlign: 'center'}}><Link to={appRoutes.products}><Button className='product-btn' >Continue Shopping</Button></Link></div>
                 </Col>
             </Row>
         </Container>
