@@ -54,7 +54,7 @@ function DetailsPage(prop) {
     return (
       <div className="details">
         <Container style={{marginBottom: '10px'}}>
-        <p className="product-name">{`${name}`}</p>
+        <p className="product-name">{`${name?name: 'Not Found :('}`}</p>
           <Row>
             <Col lg={4} md={6} sm={12} className=''>
                 <img src={`${pic ? pic : default_shirt_front}`} alt="shirt" style={{width:'100%'}}/>
