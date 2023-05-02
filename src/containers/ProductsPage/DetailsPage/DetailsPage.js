@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { Container, Row, Col, Button } from 'reactstrap';
 
-// import appRoutes from '../../../shared/appRoutes';
+import appRoutes from '../../../shared/appRoutes';
 import shirtList from '../../../shared/shirts';
 import default_shirt_front from '../../../assets/shirt_images/default-w-front.png'
 import default_shirt_back from '../../../assets/shirt_images/default-w-back.png'
@@ -93,7 +93,7 @@ function DetailsPage(prop) {
                 </div>
 
                 <div className='option-container' id='add-to-cart'>
-                  <Button className='product-btn' disabled={(quantity === 0 || size === 'Size') ? true : false} onClick={() => {prop.add_to_cart(index, cur_color, quantity, size)}}>Add To Cart</Button>
+                  <Link to={appRoutes.my_cart}><Button className='product-btn' disabled={(quantity === 0 || size === 'Size') ? true : false} onClick={() => {prop.add_to_cart(index, cur_color, quantity, size)}}>Add To Cart</Button></Link>
                 </div>
             </Col>
           </Row>
